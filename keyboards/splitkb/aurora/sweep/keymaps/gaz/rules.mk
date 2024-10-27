@@ -19,5 +19,3 @@
 
 # Creates a uf2 file instead of a hex file
 CONVERT_TO=liatris
-RGBLIGHT_ENABLE = yes # Enables QMK's RGB code
-WS2812_DRIVER = vendor # Use the RP2040's PIO interface
