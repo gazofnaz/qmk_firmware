@@ -1,6 +1,5 @@
 #include QMK_KEYBOARD_H
 
-extern keymap_config_t keymap_config;
 
 // Each layer gets a name for readability, which is then used in the keymap matrix below.
 // The underscores don't mean anything - you can have a layer called STUFF or any other name.
@@ -64,26 +63,21 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   )
 };
 
-void persistent_default_layer_set(uint16_t default_layer) {
-  eeconfig_update_default_layer(default_layer);
-  default_layer_set(default_layer);
-}
-
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
       switch(keycode) {
         case DVORAK:
           if (record->event.pressed) {
-            persistent_default_layer_set(1UL<<_DV);
+            set_single_persistent_default_layer(_DV);
           }
           return false;
         case QWERTY:
           if (record->event.pressed) {
-            persistent_default_layer_set(1UL<<_QW);
+            set_single_persistent_default_layer(_QW);
           }
           return false;
         case COLEMAK:
           if (record->event.pressed) {
-            persistent_default_layer_set(1UL<<_CM);
+            set_single_persistent_default_layer(_CM);
           }
           return false;
         default:
