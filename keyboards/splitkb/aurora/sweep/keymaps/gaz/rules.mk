@@ -14,8 +14,11 @@
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 # NOTE: These are already enabled by default at the revision level
-#ENCODER_ENABLE = yes
-#OLED_ENABLE = yes
+#ENCODER_ENABLE = no
+#OLED_ENABLE = no
 
-# Creates a uf2 file instead of a hex file
-CONVERT_TO=liatris
+SPLIT_KEYBOARD = yes # Not sure if necessary
+CONVERT_TO=liatris # Creates a uf2 file instead of a hex file
+RGB_MATRIX_ENABLE = no # Can't have this and rgblight enabled
+RGBLIGHT_ENABLE = yes # Enables QMK's RGB code
+WS2812_DRIVER = vendor # Use the RP2040's PIO interface

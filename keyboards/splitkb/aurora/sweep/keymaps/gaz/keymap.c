@@ -26,5 +26,31 @@ const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][NUM_DIRECTIONS] = {
 };
 #endif // defined(ENCODER_ENABLE) && defined(ENCODER_MAP_ENABLE)
 
+void keyboard_post_init_user(void) {
+    // Initialize RGB to static black
+    rgblight_enable_noeeprom();
+    rgblight_sethsv_noeeprom(HSV_BLACK);
+    rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+}
 
-
+void housekeeping_task_user(void) {
+    switch (get_highest_layer(layer_state | default_layer_state)) {
+        case 0:
+            // Default layer
+            rgblight_setrgb_at(RGB_BLACK, 0);
+            rgblight_setrgb_at(RGB_BLACK, 1);
+            break;
+        case 1:
+            rgblight_setrgb_at(10, 0, 0, 0);
+            rgblight_setrgb_at(10, 0, 0, 1);
+            break;
+        case 2:
+            rgblight_setrgb_at(0, 10, 0, 0);
+            rgblight_setrgb_at(0, 10, 0, 1);
+            break;
+        case 3:
+            rgblight_setrgb_at(0, 0, 10, 0);
+            rgblight_setrgb_at(0, 0, 10, 1);
+            break;
+    }
+}
