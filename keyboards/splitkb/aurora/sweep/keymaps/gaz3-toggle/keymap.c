@@ -911,3 +911,32 @@ tap_dance_action_t tap_dance_actions[] = {
         [BKSL_HME] = ACTION_TAP_DANCE_FN_ADVANCED(on_bksl_hme, bksl_hme_finished, bksl_hme_reset),
         [PIPE_END] = ACTION_TAP_DANCE_FN_ADVANCED(on_pipe_end, pipe_end_finished, pipe_end_reset),
 };
+
+void keyboard_post_init_user(void) {
+    // Initialize RGB to static black
+    rgblight_enable_noeeprom();
+    rgblight_sethsv_noeeprom(HSV_BLACK);
+    rgblight_mode_noeeprom(RGBLIGHT_MODE_STATIC_LIGHT);
+}
+
+void housekeeping_task_user(void) {
+    switch (get_highest_layer(layer_state | default_layer_state)) {
+        case 0:
+            // non-rgb colours don't work at low levels since the individual leds are still visible, the colours don't merge
+            rgblight_sethsv_at(0,   0, 10, 0); // White
+            rgblight_sethsv_at(0,   0, 10, 1);
+            break;
+        case 1:
+            rgblight_sethsv_at(0, 255, 25, 0); // Red
+            rgblight_sethsv_at(0, 255, 25, 1);
+            break;
+        case 2:
+            rgblight_sethsv_at(85, 255, 10, 0); // Green
+            rgblight_sethsv_at(85, 255, 25, 1);
+            break;
+        case 3:
+            rgblight_sethsv_at(170, 255, 25, 0); // Blue
+            rgblight_sethsv_at(170, 255, 25, 1);
+            break;
+    }
+}
