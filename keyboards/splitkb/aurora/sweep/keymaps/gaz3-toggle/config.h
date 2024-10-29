@@ -1,6 +1,7 @@
 #pragma once
 
 #define SPLIT_LAYER_STATE_ENABLE
+#define SPLIT_LED_STATE_ENABLE // syncs the capslock led value to each board
 
 #undef WS2812_DI_PIN
 #define WS2812_DI_PIN 25
