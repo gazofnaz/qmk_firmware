@@ -1,5 +1,14 @@
 #include QMK_KEYBOARD_H
 
+#include "g/keymap_combo.h"
+
+enum layers {
+    BASE,
+    SYM,
+    NUM,
+    NAV,
+};
+
 enum tap_dance_codes {
   DANCE_1,
   DANCE_2,
@@ -21,7 +30,7 @@ enum tap_dance_codes {
 };
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-  [0] = LAYOUT(
+  [BASE] = LAYOUT(
 //   |---------------------------------------------------------------------------|   |--------------------------------------------------------------------------------------|
         KC_Q,  KC_W,  KC_E,               KC_R,                    KC_T,                KC_Y,             KC_U,               KC_I,               KC_O,         KC_P,
         KC_A,  KC_S,  MT(MOD_LALT,KC_D),  MT(MOD_LGUI,KC_F),       KC_G,                KC_H,             MT(MOD_RGUI,KC_J),  MT(MOD_RALT,KC_K),  KC_L,         KC_SCLN,
@@ -30,7 +39,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   |---------------------------------------------------------------------------|   |--------------------------------------------------------------------------------------|
   ),
 
-  [1] = LAYOUT(
+  [SYM] = LAYOUT(
 //   |---------------------------------------------------------------------------------|   |--------------------------------------------------------------------------|
         KC_ESCAPE,  KC_AT,         LSFT(KC_3),     TD(DANCE_31),         KC_PERC,             KC_CIRC,       KC_AMPR,        KC_ASTR,        KC_SCLN,       KC_BSPC,
         KC_TAB,     KC_EQL,        LALT(KC_RBRC),  LALT(LSFT(KC_RBRC)),  TD(DANCE_32),        TD(BKSL_HME),  LSFT(KC_LBRC),  LSFT(KC_RBRC),  TD(PIPE_END),  KC_ENTER,
@@ -39,7 +48,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   |---------------------------------------------------------------------------------|   |--------------------------------------------------------------------------|
   ),
 
-  [2] = LAYOUT(
+  [NUM] = LAYOUT(
 //   |----------------------------------------------------------------------------------------------|   |--------------------------------------------------------------------------|
         KC_ESCAPE,  KC_MEDIA_PLAY_PAUSE,  KC_MEDIA_PREV_TRACK,  KC_MEDIA_NEXT_TRACK,  LSFT(KC_MINS),       KC_MINS,  KC_7,  KC_8,  KC_9,  KC_TRANSPARENT,
         KC_TAB,     KC_TRANSPARENT,       KC_AUDIO_VOL_DOWN,    KC_AUDIO_VOL_UP,      LSFT(KC_EQL),        KC_EQL,   KC_4,  KC_5,  KC_6,  KC_ENTER,
@@ -48,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   |----------------------------------------------------------------------------------------------|   |--------------------------------------------------------------------------|
   ),
 
-  [3] = LAYOUT(
+  [NAV] = LAYOUT(
 //   |------------------------------------------------------------------------------------|   |--------------------------------------------------------------------------|
         TD(DANCE_54),  KC_MS_WH_LEFT,  KC_MS_UP,     KC_MS_WH_RIGHT,  TD(DANCE_55),              LGUI(KC_LBRC),  LCTL(LSFT(KC_TAB)),    RCTL(KC_TAB),        LGUI(KC_RBRC),  KC_TRANSPARENT,
         TD(DANCE_56),  KC_MS_LEFT,     KC_MS_DOWN,   KC_MS_RIGHT,     MT(MOD_LGUI,KC_DEL),       TD(DANCE_60),   MT(MOD_RGUI,KC_DOWN),  MT(MOD_RALT,KC_UP),  TD(DANCE_63),   KC_ENTER,
@@ -913,20 +922,20 @@ void keyboard_post_init_user(void) {
 
 void housekeeping_task_user(void) {
     switch (get_highest_layer(layer_state | default_layer_state)) {
-        case 0:
+        case BASE:
             // non-rgb colours don't work at low levels since the individual leds are still visible, the colours don't merge
             rgblight_sethsv_at(0,   0, 10, 0); // White
             rgblight_sethsv_at(0,   0, 10, 1);
             break;
-        case 1:
+        case SYM:
             rgblight_sethsv_at(0, 255, 25, 0); // Red
             rgblight_sethsv_at(0, 255, 25, 1);
             break;
-        case 2:
+        case NUM:
             rgblight_sethsv_at(85, 255, 10, 0); // Green
             rgblight_sethsv_at(85, 255, 25, 1);
             break;
-        case 3:
+        case NAV:
             rgblight_sethsv_at(170, 255, 25, 0); // Blue
             rgblight_sethsv_at(170, 255, 25, 1);
             break;
