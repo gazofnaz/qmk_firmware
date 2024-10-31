@@ -31,39 +31,39 @@ enum tap_dance_codes {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT(
-//   |---------------------------------------------------------------------------|   |--------------------------------------------------------------------------------------|
-        KC_Q,  KC_W,  KC_E,               KC_R,                    KC_T,                KC_Y,             KC_U,               KC_I,               KC_O,         KC_P,
-        KC_A,  KC_S,  MT(MOD_LALT,KC_D),  MT(MOD_LGUI,KC_F),       KC_G,                KC_H,             MT(MOD_RGUI,KC_J),  MT(MOD_RALT,KC_K),  KC_L,         KC_SCLN,
-        KC_Z,  KC_X,  KC_C,               KC_V,                    KC_B,                KC_N,             KC_M,               TD(DANCE_2),        TD(DANCE_1),  TD(DANCE_3),
-                                          MT(MOD_MEH,KC_SPACE),    OSM(MOD_LSFT),       OSM(MOD_RCTL),    TO(1)
-//   |---------------------------------------------------------------------------|   |--------------------------------------------------------------------------------------|
+//   |----LEFT-------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------------------
+        KC_Q,  KC_W,  KC_E,               KC_R,                    KC_T,                KC_Y,           KC_U,   KC_I,     KC_O,    KC_P,
+        KC_A,  KC_S,  MT(MOD_LALT,KC_D),  MT(MOD_LGUI,KC_F),       KC_G,                KC_H,           KC_J,   KC_K,     KC_L,    KC_SCLN,
+        KC_Z,  KC_X,  KC_C,               KC_V,                    KC_B,                KC_N,           KC_M,   KC_COMM,  KC_DOT,  KC_SLASH,
+                                          MT(MOD_MEH,KC_SPACE),    OSM(MOD_LSFT),       OSM(MOD_RCTL),  TO(SYM)
+//   |----LEFT-------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------------------
   ),
 
   [SYM] = LAYOUT(
-//   |---------------------------------------------------------------------------------|   |--------------------------------------------------------------------------|
+//   |----LEFT-------------------------------------------------------------------------   |----RIGHT---------------------------------------------------------------
         KC_ESCAPE,  KC_AT,         LSFT(KC_3),     TD(DANCE_31),         KC_PERC,             KC_CIRC,       KC_AMPR,        KC_ASTR,        KC_SCLN,       KC_BSPC,
         KC_TAB,     KC_EQL,        LALT(KC_RBRC),  LALT(LSFT(KC_RBRC)),  TD(DANCE_32),        TD(BKSL_HME),  LSFT(KC_LBRC),  LSFT(KC_RBRC),  TD(PIPE_END),  KC_ENTER,
-        KC_TILD,    TD(DANCE_33),  LALT(KC_LBRC),  LALT(LSFT(KC_LBRC)),  KC_DQUO,             KC_LBRC,       KC_LPRN,        KC_RPRN,        KC_RBRC,       TO(3),
-                                                   TO(0),                OSM(MOD_LSFT),       KC_RALT,       TO(2)
-//   |---------------------------------------------------------------------------------|   |--------------------------------------------------------------------------|
+        KC_TILD,    TD(DANCE_33),  LALT(KC_LBRC),  LALT(LSFT(KC_LBRC)),  KC_DQUO,             KC_LBRC,       KC_LPRN,        KC_RPRN,        KC_RBRC,       TO(NAV),
+                                                   TO(BASE),             OSM(MOD_LSFT),       KC_RALT,       TO(NUM)
+//   |----LEFT-------------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------
   ),
 
   [NUM] = LAYOUT(
-//   |-----------------------------------------------|   |----------------------------------------------|
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,        KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
-        KC_1,    KC_2,    KC_3,    KC_4,    KC_5,         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-        KC_PSCR, KC_NO,   KC_NO,   KC_NO,   KC_NO,        KC_NO,   KC_NO,   KC_NO,   KC_F11,  KC_F12,
-                                   TO(0),   KC_LGUI,      KC_RALT, TO(2)
-//   |-----------------------------------------------|   |----------------------------------------------|
+//   |----LEFT---------------------------------------   |----RIGHT-------------------------------------
+        KC_F1,   KC_F2,   KC_F3,   KC_F4,     KC_F5,        KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
+        KC_1,    KC_2,    KC_3,    KC_4,      KC_5,         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
+        KC_PSCR, KC_NO,   KC_NO,   KC_NO,     KC_NO,        KC_NO,   KC_NO,   KC_NO,   KC_F11,  KC_F12,
+                                   TO(BASE),  KC_LGUI,      KC_RALT, TO(NUM)
+//   |----LEFT---------------------------------------   |----RIGHT-------------------------------------
   ),
 
   [NAV] = LAYOUT(
-//   |------------------------------------------------------------------------------------|   |--------------------------------------------------------------------------|
+//   |----LEFT---------------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------
         TD(DANCE_54),  KC_MS_WH_LEFT,  KC_MS_UP,     KC_MS_WH_RIGHT,  TD(DANCE_55),              LGUI(KC_LBRC),  KC_UP,        KC_MS_WH_UP,     LGUI(KC_RBRC),   KC_TRANSPARENT,
         TD(DANCE_56),  KC_MS_LEFT,     KC_MS_DOWN,   KC_MS_RIGHT,     MT(MOD_LGUI,KC_DEL),       KC_LEFT,        KC_MS_BTN1,   KC_MS_BTN3,      KC_MS_BTN2,      KC_RIGHT,
         TD(DANCE_58),  KC_MS_BTN2,     KC_MS_WH_UP,  KC_MS_WH_DOWN,   KC_TRANSPARENT,            KC_MS_BTN1,     KC_DOWN,      KC_MS_WH_DOWN,   KC_MS_ACCEL2,    KC_NO,
-                                                     TO(0),           KC_TRANSPARENT,            KC_RALT,        TO(1)
-//   |------------------------------------------------------------------------------------|   |--------------------------------------------------------------------------|
+                                                     TO(BASE),        KC_TRANSPARENT,            KC_RALT,        TO(SYM)
+//   |----LEFT----------------------------------------------------------------------------   |---RIGHT------------------------------------------------------------------
   )
 };
 
