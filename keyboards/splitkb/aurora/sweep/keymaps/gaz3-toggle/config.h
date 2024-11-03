@@ -46,3 +46,4 @@
 
 #define COMBO_VARIABLE_LEN
 #define COMBO_TERM 35
+#define COMBO_ONLY_FROM_LAYER 0

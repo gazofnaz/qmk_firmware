@@ -49,12 +49,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
 
   [NUM] = LAYOUT(
-//   |----LEFT---------------------------------------   |----RIGHT-------------------------------------
-        KC_F1,   KC_F2,   KC_F3,   KC_F4,     KC_F5,        KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
-        KC_1,    KC_2,    KC_3,    KC_4,      KC_5,         KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
-        KC_PSCR, KC_NO,   KC_NO,   KC_NO,     KC_NO,        KC_NO,   KC_NO,   KC_NO,   KC_F11,  KC_F12,
-                                   TO(BASE),  KC_LGUI,      KC_RALT, TO(NUM)
-//   |----LEFT---------------------------------------   |----RIGHT-------------------------------------
+//   |----LEFT----------------------------------------------   |----RIGHT-------------------------------------
+        KC_F1,   KC_F2,   KC_F3,   KC_F4,     KC_F5,              KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,
+        KC_1,    KC_2,    KC_3,    KC_4,      KC_5,               KC_6,    KC_7,    KC_8,    KC_9,    KC_0,
+        KC_PSCR, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_F11,  KC_F12,
+                                   TO(BASE),  OSM(MOD_LSFT),      KC_RALT, TO(NUM)
+//   |----LEFT----------------------------------------------   |----RIGHT-------------------------------------
   ),
 
   [NAV] = LAYOUT(
@@ -62,7 +62,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         TD(DANCE_54),  KC_MS_WH_LEFT,  KC_MS_UP,     KC_MS_WH_RIGHT,  TD(DANCE_55),              LGUI(KC_LBRC),  KC_UP,        KC_MS_WH_UP,     LGUI(KC_RBRC),   KC_TRANSPARENT,
         TD(DANCE_56),  KC_MS_LEFT,     KC_MS_DOWN,   KC_MS_RIGHT,     MT(MOD_LGUI,KC_DEL),       KC_LEFT,        KC_MS_BTN1,   KC_MS_BTN3,      KC_MS_BTN2,      KC_RIGHT,
         TD(DANCE_58),  KC_MS_BTN2,     KC_MS_WH_UP,  KC_MS_WH_DOWN,   KC_TRANSPARENT,            KC_MS_BTN1,     KC_DOWN,      KC_MS_WH_DOWN,   KC_MS_ACCEL2,    KC_NO,
-                                                     TO(BASE),        KC_TRANSPARENT,            KC_RALT,        TO(SYM)
+                                                     TO(BASE),        OSM(MOD_LSFT),             KC_RALT,        TO(SYM)
 //   |----LEFT----------------------------------------------------------------------------   |---RIGHT------------------------------------------------------------------
   )
 };
@@ -924,8 +924,8 @@ void housekeeping_task_user(void) {
     switch (get_highest_layer(layer_state | default_layer_state)) {
         case BASE:
             // non-rgb colours don't work at low levels since the individual leds are still visible, the colours don't merge
-            rgblight_sethsv_at(0,   0, 10, 0); // White
-            rgblight_sethsv_at(0,   0, 10, 1);
+            rgblight_sethsv_at(HSV_BLACK, 0); // Off
+            rgblight_sethsv_at(HSV_BLACK, 1);
             break;
         case SYM:
             rgblight_sethsv_at(0, 255, 25, 0); // Red
