@@ -1,6 +1,7 @@
 # Quantum Mechanical Keyboard Firmware
 
 # Note: dz60 is not buildable from master. Too many changes in qmk since that build.
+`make satan:iso_split_rshift`
 
 [![Current Version](https://img.shields.io/github/tag/qmk/qmk_firmware.svg)](https://github.com/qmk/qmk_firmware/tags)
 [![Discord](https://img.shields.io/discord/440868230475677696.svg)](https://discord.gg/qmk)
