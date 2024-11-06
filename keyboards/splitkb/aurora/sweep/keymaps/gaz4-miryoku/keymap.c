@@ -14,66 +14,66 @@ enum layers {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [BASE] = LAYOUT(
-//   |----LEFT-------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------------------
-        KC_Q,          KC_W,          KC_E,             KC_R,             KC_T,       KC_Y,             KC_U,             KC_I,          KC_O,          KC_P,
-        LGUI_T(KC_A),  LALT_T(KC_S),  LCTL_T(KC_D),     LSFT_T(KC_F),     KC_G,       KC_H,             RSFT_T(KC_J),     RCTL_T(KC_K),  RALT_T(KC_L),  RGUI_T(KC_SCLN),
-        KC_Z,          KC_X,          KC_C,             KC_V,             KC_B,       KC_N,             KC_M,             KC_COMM,       KC_DOT,        KC_SLASH,
-                                      LT(NAV, KC_SPC),  LT(MOU, KC_TAB),              LT(SYM, KC_ENT),  LT(NUM, KC_BSPC)
-//   |----LEFT-------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------------------
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
+        KC_Q,               KC_W,               KC_E,               KC_R,                 KC_T,              KC_Y,             KC_U,                KC_I,              KC_O,              KC_P,
+        LGUI_T(KC_A),       LALT_T(KC_S),       LCTL_T(KC_D),       LSFT_T(KC_F),         KC_G,              KC_H,             RSFT_T(KC_J),        RCTL_T(KC_K),      RALT_T(KC_L),      RGUI_T(KC_SCLN),
+        KC_Z,               KC_X,               KC_C,               KC_V,                 KC_B,              KC_N,             KC_M,                KC_COMM,           KC_DOT,            KC_SLASH,
+                                                                    LT(NAV, KC_SPC),      LT(MOU, KC_TAB),   LT(SYM, KC_ENT),  LT(NUM, KC_BSPC)
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
   ),
 
   [SYM] = LAYOUT(
-//   |----LEFT-------------------------------------------------------------------   |----RIGHT---------------------------------------------------------------
-        KC_LCBR,        KC_AMPR,        KC_ASTR,        KC_LPRN,        KC_RCBR,      KC_NO,         KC_NO,         KC_NO,         KC_NO,        KC_NO,
-        KC_COLN,        KC_DLR,         KC_PERC,        KC_CIRC,        KC_PLUS,      KC_NO,         KC_NO,         KC_NO,         KC_NO,        KC_NO,
-        KC_TILD,        KC_EXLM,        KC_AT,          KC_HASH,        KC_PIPE,      KC_NO,         KC_NO,         KC_NO,         KC_NO,        KC_NO,
-                                                        KC_RPRN,        KC_UNDS,      KC_NO,         KC_NO
-//   |----LEFT-------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
+        KC_LCBR,            KC_AMPR,            KC_ASTR,            KC_LPRN,              KC_RCBR,           KC_NO,            KC_NO,               KC_NO,             KC_NO,             KC_NO,
+        LGUI_T(KC_COLN),    LALT_T(KC_DLR),     LCTL_T(KC_PERC),    LSFT_T(KC_CIRC),      KC_PLUS,           KC_NO,            RSFT_T(KC_NO),       RCTL_T(KC_NO),     RALT_T(KC_NO),     RGUI_T(KC_NO),
+        KC_TILD,            KC_EXLM,            KC_AT,              KC_HASH,              KC_PIPE,           KC_NO,            KC_NO,               KC_NO,             KC_NO,             KC_NO,
+                                                KC_RPRN,            KC_UNDS,              KC_NO,             KC_NO
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
   ),
 
   [NUM] = LAYOUT(
-//   |----LEFT-------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------------
-        KC_LBRC,          KC_7,          KC_8,          KC_9,          KC_RBRC,        KC_NO,         KC_NO,         KC_NO,         KC_NO,        KC_NO,
-        KC_SCLN,          KC_4,          KC_5,          KC_6,          KC_EQL,         KC_NO,         KC_NO,         KC_NO,         KC_NO,        KC_NO,
-        KC_GRV,           KC_1,          KC_2,          KC_3,          KC_NUBS,        KC_NO,         KC_NO,         KC_NO,         KC_NO,        KC_NO,
-                                                        KC_0,          KC_MINS,        KC_NO,         KC_NO
-//   |----LEFT-------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------------
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
+        KC_LBRC,             KC_7,              KC_8,               KC_9,                KC_RBRC,            KC_NO,            KC_NO,               KC_NO,             KC_NO,             KC_NO,
+        LGUI_T(KC_SCLN),     LALT_T(KC_4),      LCTL_T(KC_5),       LSFT_T(KC_6),        KC_EQL,             KC_NO,            RSFT_T(KC_NO),       RCTL_T(KC_NO),     RALT_T(KC_NO),     RGUI_T(KC_NO),
+        KC_GRV,              KC_1,              KC_2,               KC_3,                KC_NUBS,            MO(FUN),          KC_NO,               KC_NO,             KC_NO,             KC_NO,
+                                                                    KC_0,                KC_MINS,            KC_NO,            KC_NO
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
   ),
 
   [NAV] = LAYOUT(
-//   |----LEFT---------------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     MO(MED),            KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-                                 KC_NO,     KC_NO,              KC_NO,   KC_NO
-//   |----LEFT----------------------------------------------------------------------------   |---RIGHT------------------------------------------------------------------
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_AGIN,          KC_PASTE,            KC_COPY,           KC_CUT,            KC_UNDO,
+        LGUI_T(KC_NO),      LALT_T(KC_NO),      LCTL_T(KC_NO),      LSFT_T(KC_NO),      KC_NO,               KC_CAPS,          RSFT_T(KC_LEFT),     RCTL_T(KC_DOWN),   RALT_T(KC_UP),     RGUI_T(KC_RIGHT),
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,              MO(MED),             KC_INS,           KC_HOME,             KC_PGDN,           KC_PGUP,           KC_END,
+                                                                    KC_NO,              KC_NO,               KC_ENT,           KC_BSPC
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
   ),
 
   [MOU] = LAYOUT(
-//   |----LEFT---------------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-                                 KC_NO,     KC_NO,              KC_NO,   KC_NO
-//   |----LEFT----------------------------------------------------------------------------   |---RIGHT------------------------------------------------------------------
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_AGIN,          KC_PASTE,            KC_COPY,           KC_CUT,            KC_UNDO,
+        LGUI_T(KC_NO),      LALT_T(KC_NO),      LCTL_T(KC_NO),      LSFT_T(KC_NO),      KC_NO,               MS_BTN3,          RSFT_T(MS_LEFT),     RCTL_T(MS_DOWN),   RALT_T(MS_UP),     RGUI_T(MS_RGHT),
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_NO,            MS_WHLL,             MS_WHLD,           MS_WHLU,           MS_WHLR,
+                                                                    KC_NO,              KC_NO,               MS_BTN2,          MS_BTN1
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
   ),
 
   [MED] = LAYOUT(
-//   |----LEFT---------------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-                                 KC_NO,     KC_NO,              KC_NO,   KC_NO
-//   |----LEFT----------------------------------------------------------------------------   |---RIGHT------------------------------------------------------------------
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_NO,            KC_NO,               KC_NO,             KC_NO,             KC_NO,
+        LGUI_T(KC_NO),      LALT_T(KC_NO),      LCTL_T(KC_NO),      LSFT_T(KC_NO),      KC_NO,               KC_NO,            RSFT_T(KC_NO),       RCTL_T(KC_NO),     RALT_T(KC_NO),     RGUI_T(KC_NO),
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_NO,            KC_NO,               KC_NO,             KC_NO,             KC_NO,
+                                                                    KC_NO,              KC_NO,               KC_NO,            KC_NO
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
   ),
 
   [FUN] = LAYOUT(
-//   |----LEFT---------------------------------------------------------------------------   |----RIGHT-----------------------------------------------------------------
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-        KC_NO, KC_NO,   KC_NO,   KC_NO,     KC_NO,              KC_NO,   KC_NO,   KC_NO,   KC_NO,  KC_NO,
-                                 KC_NO,     KC_NO,              KC_NO,   KC_NO
-//   |----LEFT----------------------------------------------------------------------------   |---RIGHT------------------------------------------------------------------
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
+        KC_F12,             KC_F7,               KC_F8,             KC_F9,              KC_PSCR,             KC_NO,            KC_NO,               KC_NO,             KC_NO,             KC_NO,
+        LGUI_T(KC_F11),     LALT_T(KC_F4),       LCTL_T(KC_F5),     LSFT_T(KC_F6),      KC_NO,               KC_NO,            RSFT_T(KC_NO),       RCTL_T(KC_NO),     RALT_T(KC_NO),     RGUI_T(KC_NO),
+        KC_F10,             KC_F1,               KC_F2,             KC_F3,              KC_NO,               KC_NO,            KC_NO,               KC_NO,             KC_NO,             KC_NO,
+                                                                    KC_SPC,             KC_TAB,              KC_NO,            KC_NO
+//   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
   )
 };
 
@@ -92,29 +92,24 @@ void housekeeping_task_user(void) {
             rgblight_sethsv_at(HSV_BLACK, 0); // Off
             rgblight_sethsv_at(HSV_BLACK, 1);
             break;
-        case SYM:
-            rgblight_sethsv_at(0, 255, 25, 0); // Red
-            rgblight_sethsv_at(0, 255, 25, 1);
-            break;
-        case NUM:
-            rgblight_sethsv_at(85, 255, 10, 0); // Green
-            rgblight_sethsv_at(85, 255, 10, 1);
-            break;
         case NAV:
-            rgblight_sethsv_at(170, 255, 25, 0); // Blue
-            rgblight_sethsv_at(170, 255, 25, 1);
+            rgblight_sethsv_at(0, 255, 25, 0); // Red
             break;
         case MOU:
-            rgblight_setrgb_at(2, 2, 0, 0); // RG
-            rgblight_setrgb_at(2, 2, 0, 1);
+            rgblight_sethsv_at(170, 255, 25, 0); // Blue
             break;
         case MED:
-            rgblight_setrgb_at(0, 2, 2, 0); // RG
-            rgblight_setrgb_at(0, 2, 2, 1);
+            rgblight_sethsv_at(85, 255, 10, 0); // Green
+            break;
+        case NUM:
+            rgblight_sethsv_at(0, 255, 25, 1); // Red
             break;
         case FUN:
-            rgblight_setrgb_at(2, 0, 2, 0); // RG
-            rgblight_setrgb_at(2, 0, 2, 1);
+            rgblight_sethsv_at(85, 255, 10, 1); // Green
             break;
+        case SYM:
+            rgblight_sethsv_at(170, 255, 25, 1); // Blue
+            break;
+
     }
 }
