@@ -102,13 +102,13 @@ void housekeeping_task_user(void) {
             rgblight_sethsv_at(85, 255, 10, 0); // Green
             break;
         case NUM:
-            rgblight_sethsv_at(170, 255, 25, 1); // Blue
+            rgblight_sethsv_at(0, 255, 25, 1); // Red
             break;
         case FUN:
             rgblight_sethsv_at(85, 255, 10, 1); // Green
             break;
         case SYM:
-            rgblight_sethsv_at(0, 255, 25, 1); // Red
+            rgblight_sethsv_at(170, 255, 25, 1); // Blue
             break;
     }
 }
