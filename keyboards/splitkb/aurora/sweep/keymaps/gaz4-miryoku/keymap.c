@@ -51,8 +51,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [MOU] = LAYOUT(
 //   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
-        KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_AGIN,          KC_PASTE,            KC_COPY,           KC_CUT,            KC_UNDO,
-        LGUI_T(KC_NO),      LALT_T(KC_NO),      LCTL_T(KC_NO),      LSFT_T(KC_NO),      KC_NO,               MS_LEFT,          MS_DOWN,             MS_UP,             MS_RGHT,           KC_NO,
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_AGIN,          KC_PASTE,            MS_UP,             KC_CUT,            KC_UNDO,
+        LGUI_T(KC_NO),      LALT_T(KC_NO),      LCTL_T(KC_NO),      LSFT_T(KC_NO),      KC_NO,               KC_COPY,          MS_LEFT,             MS_DOWN,           MS_RGHT,           KC_NO,
         KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               MS_WHLL,          MS_WHLD,             MS_WHLU,           MS_WHLR,           MS_BTN3,
                                                                     KC_NO,              KC_NO,               MS_BTN2,          MS_BTN1
 //   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
@@ -60,8 +60,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [NAV] = LAYOUT(
 //   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
-        KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_AGIN,          KC_PASTE,            KC_COPY,           KC_CUT,            KC_UNDO,
-        LGUI_T(KC_NO),      LALT_T(KC_NO),      LCTL_T(KC_NO),      LSFT_T(KC_NO),      KC_NO,               KC_LEFT,          KC_DOWN,             KC_UP,             KC_RIGHT,          KC_CAPS,
+        KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_AGIN,          KC_PASTE,            KC_UP,             KC_CUT,            KC_UNDO,
+        LGUI_T(KC_NO),      LALT_T(KC_NO),      LCTL_T(KC_NO),      LSFT_T(KC_NO),      KC_NO,               KC_COPY,          KC_LEFT,             KC_DOWN,           KC_RIGHT,          KC_CAPS,
         KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,               KC_HOME,          KC_PGDN,             KC_PGUP,           KC_END,            KC_INS,
                                                                     KC_NO,              KC_NO,               KC_ENT,           KC_BSPC
 //   |----LEFT------------------------------------------------------------------------------------------   |----RIGHT----------------------------------------------------------------------------------------
