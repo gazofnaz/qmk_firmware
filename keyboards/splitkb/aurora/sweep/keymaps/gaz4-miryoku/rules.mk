@@ -12,5 +12,5 @@ WS2812_DRIVER = vendor # Use the RP2040's PIO interface
 #TAP_DANCE_ENABLE = yes
 
 # Enables combos (via c macros) to be defined cleanly in combos.def
-#COMBO_ENABLE = yes
-#VPATH += keyboards/gboards
+COMBO_ENABLE = yes
+VPATH += keyboards/gboards
