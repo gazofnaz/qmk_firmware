@@ -1,0 +1,8 @@
+// Right Hand
+//COMB(KL_BSPC,       KC_BSPC,  KC_I, KC_O)
+//COMB(COMM_DOT_ENT,  KC_ENT,   KC_K, KC_L)
+
+// Left Hand
+//COMB(WE_TAB,     KC_TAB,      KC_W, KC_E)
+//COMB(SD_ESC,     KC_ESC,      KC_A, KC_S)
+//COMB(SD_ESC_2,     KC_ESC,      KC_Q, KC_W)
