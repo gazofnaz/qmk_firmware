@@ -70,10 +70,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
   [MED] = LAYOUT_split_3x6_3(
 //   |----LEFT------------------------------------------------------------------------------------------                   |----RIGHT----------------------------------------------------------------------------------------
-        KC_NO,    KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,                     UG_PREV,          UG_NEXT,             KC_NO,             KC_NO,             KC_NO,            KC_NO,
-        KC_NO,    LGUI_T(KC_NO),      LALT_T(KC_NO),      LCTL_T(KC_NO),      LSFT_T(KC_NO),      KC_NO,                     UG_TOGG,          RSFT_T(KC_NO),       RCTL_T(KC_NO),     RALT_T(KC_NO),     RGUI_T(KC_CAPS),  KC_NO,
+        KC_NO,    KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,                     UG_VALD,          UG_VALU,             KC_NO,             KC_NO,             KC_NO,            KC_NO,
+        KC_NO,    LGUI_T(KC_NO),      LALT_T(KC_NO),      LCTL_T(KC_NO),      LSFT_T(KC_NO),      KC_NO,                     UG_SATD,          UG_SATU,             RCTL_T(KC_NO),     RALT_T(KC_NO),     RGUI_T(KC_CAPS),  KC_NO,
         KC_NO,    KC_NO,              KC_NO,              KC_NO,              KC_NO,              KC_NO,                     UG_HUED,          UG_HUEU,             KC_NO,             KC_NO,             KC_INS,           KC_NO,
-                                                          KC_NO,              KC_NO,              KC_NO,                     KC_NO,            KC_NO,               KC_NO
+                                                          KC_NO,              KC_NO,              KC_NO,                     UG_TOGG,          UG_PREV,             UG_NEXT
 //   |----LEFT------------------------------------------------------------------------------------------                   |----RIGHT----------------------------------------------------------------------------------------
   )
 };
