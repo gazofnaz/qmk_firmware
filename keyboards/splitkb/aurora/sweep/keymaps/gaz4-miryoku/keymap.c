@@ -1,7 +1,7 @@
 #include QMK_KEYBOARD_H
 #include "keymap_uk.h"
 
-//#include "g/keymap_combo.h"
+#include "g/keymap_combo.h"
 
 enum layers {
     BASE,
@@ -18,7 +18,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //   |----LEFT------------------------------------------------------------------------------------------       |----RIGHT----------------------------------------------------------------------------------------
       KC_Q,               KC_W,               KC_E,               KC_R,                 KC_T,                    KC_Y,             KC_U,                KC_I,              KC_O,              KC_P,
       LGUI_T(KC_A),       LALT_T(KC_S),       LCTL_T(KC_D),       LSFT_T(KC_F),         KC_G,                    KC_H,             RSFT_T(KC_J),        RCTL_T(KC_K),      RALT_T(KC_L),      RGUI_T(KC_SCLN),
-      KC_Z,               KC_X,               KC_C,               KC_V,                 KC_B,                    KC_N,             KC_M,                KC_COMM,           KC_DOT,            KC_SLASH,
+      LCTL_T(KC_Z),       KC_X,               KC_C,               KC_V,                 KC_B,                    KC_N,             KC_M,                KC_COMM,           KC_DOT,            KC_SLASH,
                                                                   LT(NAV, KC_SPC),      LT(MOU, KC_TAB),         LT(FUN, KC_ENT),  LT(NUM, KC_BSPC)
 //   |----LEFT------------------------------------------------------------------------------------------       |----RIGHT----------------------------------------------------------------------------------------
   ),

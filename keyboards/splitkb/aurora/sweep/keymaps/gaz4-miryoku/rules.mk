@@ -12,5 +12,5 @@ CONVERT_TO=liatris # Creates a uf2 file instead of a hex file
 #TAP_DANCE_ENABLE = yes
 
 # Enables combos (via c macros) to be defined cleanly in combos.def
-#COMBO_ENABLE = yes
-#VPATH += keyboards/gboards
+COMBO_ENABLE = yes
+VPATH += keyboards/gboards
