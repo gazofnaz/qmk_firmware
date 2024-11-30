@@ -3,22 +3,22 @@
 #define SPLIT_LAYER_STATE_ENABLE
 #define SPLIT_LED_STATE_ENABLE // syncs the capslock led value to each board
 
-#undef WS2812_DI_PIN
-#define WS2812_DI_PIN 25
+//#undef WS2812_DI_PIN
+//#define WS2812_DI_PIN 25
 
-#undef RGBLED_SPLIT
-#define RGBLED_SPLIT {1, 1}
-#undef RGBLIGHT_LED_COUNT
-#define RGBLIGHT_LED_COUNT 2
-#undef RGBLIGHT_LIMIT_VAL
-#define RGBLIGHT_LIMIT_VAL 150
+//#undef RGBLED_SPLIT
+//#define RGBLED_SPLIT {1, 1}
+//#undef RGBLIGHT_LED_COUNT
+//#define RGBLIGHT_LED_COUNT 2
+//#undef RGBLIGHT_LIMIT_VAL
+//#define RGBLIGHT_LIMIT_VAL 150
 
 #define LED_CAPS_LOCK_PIN 24
 #define LED_PIN_ON_STATE 0
 
-#define TAPPING_FORCE_HOLD
+//#define TAPPING_FORCE_HOLD
 #undef TAPPING_TERM
-#define TAPPING_TERM 240
+#define TAPPING_TERM 275
 #define RETRO_TAPPING
 
 

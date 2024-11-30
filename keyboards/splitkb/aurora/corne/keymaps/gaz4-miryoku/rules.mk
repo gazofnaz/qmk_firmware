@@ -1,6 +1,6 @@
 # NOTE: These are already enabled by default at the revision level
-#ENCODER_ENABLE = no
-#OLED_ENABLE = no
+ENCODER_ENABLE = no
+OLED_ENABLE = no
 
 SPLIT_KEYBOARD = yes # Not sure if necessary
 CONVERT_TO=liatris # Creates a uf2 file instead of a hex file
