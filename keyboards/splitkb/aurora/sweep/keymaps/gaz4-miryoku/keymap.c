@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [NUM] = LAYOUT(
 //   |----LEFT------------------------------------------------------------------------------------------       |----RIGHT----------------------------------------------------------------------------------------
       KC_LBRC,            KC_7,               KC_8,               KC_9,                 KC_RBRC,                 QK_LLCK,          KC_NO,               KC_NO,             KC_NO,             KC_NO,
-      LGUI_T(KC_NO),      LALT_T(KC_4),       LCTL_T(KC_5),       LSFT_T(KC_6),         KC_EQL,                  KC_NO,            RSFT_T(KC_NO),       RCTL_T(UK_QUOT),   RALT_T(KC_MINS),   RGUI_T(KC_NO),
+      LGUI_T(KC_NO),      LALT_T(KC_4),       LCTL_T(KC_5),       LSFT_T(KC_6),         KC_EQL,                  KC_BSLS,          RSFT_T(KC_NO),       RCTL_T(UK_QUOT),   RALT_T(KC_MINS),   RGUI_T(KC_NO),
       KC_0,               KC_1,               KC_2,               KC_3,                 KC_MINS,                 KC_NO,            KC_NO,               KC_NO,             KC_NO,             UK_BSLS,
                                                                   KC_SPC,               KC_DOT,                  KC_NO,            KC_NO
 //   |----LEFT------------------------------------------------------------------------------------------       |----RIGHT----------------------------------------------------------------------------------------
@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_F12,             KC_F7,              KC_F8,              KC_F9,                KC_PSCR,                 QK_LLCK,          KC_NO,               KC_NO,             KC_NO,             KC_NO,
       LGUI_T(KC_F11),     LALT_T(KC_F4),      LCTL_T(KC_F5),      LSFT_T(KC_F6),        KC_NO,                   KC_NO,            RSFT_T(KC_NO),       RCTL_T(KC_NO),     RALT_T(KC_NO),     RGUI_T(KC_NO),
       KC_F10,             KC_F1,              KC_F2,              KC_F3,                KC_NO,                   KC_NO,            KC_NO,               KC_NO,             KC_NO,             KC_NO,
-                                                                  KC_SPC,               KC_TAB,                  KC_NO,            KC_NO
+                                                                  KC_SPC,               KC_TAB,                  KC_NO,            KC_DEL
 //   |----LEFT------------------------------------------------------------------------------------------       |----RIGHT----------------------------------------------------------------------------------------
   ),
 
