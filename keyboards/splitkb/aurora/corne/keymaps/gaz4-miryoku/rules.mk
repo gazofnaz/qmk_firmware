@@ -8,6 +8,8 @@ RGB_MATRIX_ENABLE = no # Can't have this and rgblight enabled
 RGBLIGHT_ENABLE = yes # Enables QMK's RGB code
 WS2812_DRIVER = vendor # Use the RP2040's PIO interface
 
+LAYER_LOCK_ENABLE = yes
+
 #BOOTMAGIC_ENABLE = yes
 #TAP_DANCE_ENABLE = yes
 
