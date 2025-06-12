@@ -35,7 +35,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [NUM] = LAYOUT_split_3x6_3(
 //   |----LEFT------------------------------------------------------------------------------------------                   |----RIGHT----------------------------------------------------------------------------------------
         KC_TAB,   KC_LBRC,            KC_7,               KC_8,               KC_9,                 KC_RBRC,                 QK_LLCK,          KC_NO,               KC_NO,             KC_NO,             KC_NO,            KC_NO,
-        KC_TRNS,  LGUI_T(KC_LPRN),    LALT_T(KC_4),       LCTL_T(KC_5),       LSFT_T(KC_6),         KC_RPRN,                 KC_BSLS,          RSFT_T(KC_NO),       RCTL_T(UK_QUOT),   RALT_T(KC_MINS),   RGUI_T(KC_EQL),   KC_NO,
+        KC_TRNS,  KC_LPRN,            LALT_T(KC_4),       LCTL_T(KC_5),       LSFT_T(KC_6),         KC_RPRN,                 KC_BSLS,          RSFT_T(KC_NO),       RCTL_T(UK_QUOT),   RALT_T(KC_MINS),   RGUI_T(KC_EQL),   KC_NO,
         KC_TRNS,  KC_0,               KC_1,               KC_2,               KC_3,                 KC_MINS,                 KC_NO,            KC_NO,               KC_TRNS,           KC_TRNS,           KC_TRNS,          KC_NO,
                                                           KC_ESC,             KC_SPC,               KC_DOT,                  KC_TRNS,          KC_TRNS,             KC_TRNS
 //   |----LEFT------------------------------------------------------------------------------------------                   |----RIGHT----------------------------------------------------------------------------------------
